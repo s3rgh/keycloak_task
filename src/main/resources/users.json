@@ -1,0 +1,16 @@
+[
+  {
+    "firstName": "Vladimir",
+    "lastName": "Petukhov",
+    "email": "petukhov@mail.ru",
+    "login": "petukhov666",
+    "password": "kapustadrakon"
+  },
+  {
+    "firstName": "Maria",
+    "lastName": "Ivanova",
+    "email": "mashka1995@gmail.com",
+    "login": "mashka1995",
+    "password": "123456"
+  }
+]
