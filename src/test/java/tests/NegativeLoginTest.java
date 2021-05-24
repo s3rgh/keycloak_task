@@ -8,21 +8,21 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class NegativeLoginTest extends TestBase {
 
-  public static Object[][] usersTestData() {
-    return new Object[][]{
-            {"sergh1", "123456"},
-            {"", ""},
-            {"1000000", ""}
-    };
-  }
+    public static Object[][] usersTestData() {
+        return new Object[][]{
+                {"sergh1", "123456"},
+                {"", ""},
+                {"1000000", ""}
+        };
+    }
 
-  @ParameterizedTest
-  @MethodSource("usersTestData")
-  public void testLoginNegative(String login, String password) {
-    app.getLoginPage()
-            .loginUserAs(new User().withUserName(login).withPassword(password))
-            .clickSubmitButton();
+    @ParameterizedTest
+    @MethodSource("usersTestData")
+    public void testLoginNegative(String login, String password) {
+        app.getLoginPage()
+                .loginUserAs(new User().withUserName(login).withPassword(password))
+                .clickSubmitButton();
 
-    assertTrue(app.getLoginPage().wrongLoginMessage.isDisplayed());
-  }
+        assertTrue(app.getLoginPage().wrongLoginMessage.isDisplayed());
+    }
 }

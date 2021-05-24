@@ -12,7 +12,7 @@ public class LoginPage extends BasePage {
     @FindBy(linkText = "Register")
     public WebElement registerLink;
 
-    @FindBy(xpath= "//*[@id=\"input-error\"]")
+    @FindBy(xpath = "//*[@id=\"input-error\"]")
     public WebElement wrongLoginMessage;
 
     public LoginPage(WebDriver webDriver) {

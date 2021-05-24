@@ -31,7 +31,8 @@ public class SignUpTest extends TestBase {
             }
         }
         Gson gson = new Gson();
-        List<NewUser> users = gson.fromJson(json.toString(), new TypeToken<List<NewUser>>(){}.getType());
+        List<NewUser> users = gson.fromJson(json.toString(), new TypeToken<List<NewUser>>() {
+        }.getType());
         return users.stream().map((u) -> new Object[]{u}).collect(Collectors.toList()).iterator();
     }
 

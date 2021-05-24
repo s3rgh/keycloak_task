@@ -105,15 +105,16 @@
 `users.json`
 
 ##Инструкция по запуску
-###Установка тестовой среды
-1. Скачать и установить Docker https://www.docker.com/
-2. Установить с помощью Docker Keycloak https://www.keycloak.org/getting-started/getting-started-docker
-   `docker run -p 8080:8080 -e KEYCLOAK_USER=admin -e KEYCLOAK_PASSWORD=admin quay.io/keycloak/keycloak:13.0.0`
-3. Зайти в http://localhost:8080/auth/admin
-4. Настроить свой realm
-5. Добавить пользователя и сохранить
-6. Перейти в http://localhost:8080/auth/realms/myrealm/account, чтобы убедиться, что все настроено верно
 
-7. `git clone` - клонирует репозиторий на локальную машину
-8. `docker build -t keyclocktask:latest . ` - билдим образ контейнера
-9. `docker run -it --network="host" keyclocktask` - запускаем образ
+###Установка тестовой среды
+
+1. Скачать и установить Docker https://www.docker.com/
+2. `docker run -p 8080:8080 -e KEYCLOAK_USER=admin -e KEYCLOAK_PASSWORD=admin quay.io/keycloak/keycloak:13.0.0`
+3. Открыть https://www.keycloak.org/getting-started/getting-started-docker, поможет в настройке
+4. Зайти в http://localhost:8080/auth/admin
+5. Настроить свой realm
+6. Добавить пользователя и сохранить
+7. Перейти в http://localhost:8080/auth/realms/myrealm/account, чтобы убедиться, что все настроено верно
+8. `git clone https://github.com/s3rgh/keycloak_task.git` - клонируем репозиторий на локальную машину
+9. `docker build -t keyclocktask:latest . ` - билдим образ контейнера
+10. `docker run -it --network="host" keyclocktask` - запускаем образ
